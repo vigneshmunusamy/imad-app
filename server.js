@@ -72,12 +72,6 @@ var htmltemplate=`
                 <a href='/'>get back to home page</a>
                 </div>
                 <div>
-                <a href='/article-two'>2nd page linke</a>
-                </div>
-                <div>
-                <a href='/article-three'>3rd page link</a>
-                </div>
-                <div>
                 <a href='/ui/madi.png'>cartoon</a>
                 </div>
                 <hr/>
