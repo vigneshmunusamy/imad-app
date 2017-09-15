@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles=
 {
- Articleone: 
+ articleone: 
    {
     title:'Article one|vignesh',
     heading:'Article 1',
