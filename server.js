@@ -9,7 +9,7 @@ var articles=
 {
  Articleone: 
    {
-    title:'Article 1|vignesh',
+    title:'Article one|vignesh',
     heading:'Article 1',
     date:'sep 15,2017',
     content:           `<p>
@@ -25,7 +25,7 @@ var articles=
      },
  articletwo: {
      title:'Article2|vignesh',
-    heading:'Article 2',
+    heading:'Article two',
     date:"sep 15,2017",
     content:           `<p>
                             created an article 2 link
@@ -38,7 +38,7 @@ var articles=
                         </p>`
  },
 articlethree : {
-     title:'Article 3|vignesh',
+     title:'Article three|vignesh',
     heading:'Article 3',
     date:"sep 15,2017",
     content:           `<p>
