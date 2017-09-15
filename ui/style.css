@@ -11,6 +11,15 @@ body {
 .text-big {
     font-size: 300%;
 }
+.container{
+                max-width:800px;
+                margin:0 auto;
+                color:green;
+                font-family:Times New Roman;
+                Padding-top: 10px;
+                Padding-right: 50px;
+                Padding-left: 2px;
+}
 
 .bold {
     font-weight: bold;
