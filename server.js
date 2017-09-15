@@ -36,7 +36,7 @@ var articles=
                             created an article 2 link
                         </p>`
  },
-'articlethree' : {
+'articlethree': {
      title:'Article three|vignesh',
     heading:'Article 3',
     date:'sep 15,2017',
@@ -99,7 +99,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 app.get('/:articlename',function(req,res){
     var articlesname=req.param.articlename;
-    res.send(createtemplate(articles(articlesname)));
+    res.send(createtemplate(articles((articlesname)));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
