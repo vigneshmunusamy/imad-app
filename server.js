@@ -9,9 +9,9 @@ var articles=
 {
  articleone: 
    {
-    title:`Article one|vignesh`,
-    heading:`Article 1`,
-    date:`sep 15,2017`,
+    title:'Article one|vignesh',
+    heading:'Article 1',
+    date:'sep 15,2017',
     content:           `<p>
                             created an article one link
                         </p>
@@ -24,9 +24,9 @@ var articles=
     
      },
  articletwo: {
-     title:`Article2|vignesh`,
-    heading:`Article two`,
-    date:`sep 15,2017`,
+     title:'Article2|vignesh',
+    heading:'Article two',
+    date:'sep 15,2017',
     content:           `<p>
                             created an article 2 link
                         </p>
@@ -38,9 +38,9 @@ var articles=
                         </p>`
  },
 articlethree : {
-     title:`Article three|vignesh`,
-    heading:`Article 3`,
-    date:`sep 15,2017`,
+     title:'Article three|vignesh',
+    heading:'Article 3',
+    date:'sep 15,2017',
     content:           `<p>
                             created an article 3 link
                         </p>
