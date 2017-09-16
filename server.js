@@ -101,6 +101,9 @@ app.get('/:articlename',function(req,res){
     var articlesname=req.params.articlename;
     res.send(createtemplate(articles[articlesname]));
 });
+app.get('/ui/vijay', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
