@@ -6,8 +6,8 @@ element.innerHTML='deleted';
 var img=document.getElementById('madi');
 var marginRight=0;
 function right(){
-    marginRight=marginRight+10;
-    img.style.marginRight=marginRight+'px';
+    marginRight=marginRight+1;
+    img.style.marginRight=marginRight+'5px';
 }
 img.onclick=function(){
 var interval=setInterval(right,100);
