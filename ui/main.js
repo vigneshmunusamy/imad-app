@@ -4,10 +4,10 @@ var element=document.getElementById('first');
 element.innerHTML='deleted';
 //perform functions with image
 var img=document.getElementById('madi');
-var marginLef=0;
+var marginRight=0;
 function right(){
-    marginLef=marginLef+10;
-    img.style.marginLef=marginLef+'px';
+    marginRight=marginRight+10;
+    img.style.marginRight=marginRight+'px';
 }
 img.onclick=function(){
 var interval=setInterval(right,100);
