@@ -1,12 +1,11 @@
-console.log('Loaded!');
-//change the html text
-//perform functions with image
-var img=document.getElementById('madi');
-var marginRight=0;
-function right(){
-    marginRight=marginRight+1;
-    img.style.marginRight=marginRight+'5px';
-}
-img.onclick=function(){
-var interval=setInterval(right,100);
+var button=document.getElementById('counter');
+var counter=0;
+button.onclick=function(){
+    //get a var of counter end point
+    
+    //respond to the request
+    
+    counter=counter+1;
+    var span=document.getElementById('count');
+    span.innerHTML=counter.toString();
 };
