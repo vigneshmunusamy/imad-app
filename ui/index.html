@@ -13,8 +13,23 @@
         </div>
         <script>
             alert('welcome to the bluewhale game');
+            console.log('Loaded!');
+//change the html text
+var element=document.getElementById('first');
+element.innerHTML='deleted';
+//perform functions with image
+var img=document.getElementById('madi');
+var marginLeft=0;
+function right(){
+    marginLeft=marginLeft+10;
+    img.style.marginLeft=marginLeft+'px';
+}
+img.onclick=function(){
+var interval=setInterval(right,100);
+};
+
         </script>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
+       // <script type="text/javascript" src="/ui/main.js">
+       // </script>
     </body>
 </html>
