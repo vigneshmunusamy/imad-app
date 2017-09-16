@@ -3,6 +3,9 @@ body {
     margin-top: 75px;
     color:orange;
 }
+.class{
+    color:red;
+}
 
 .center {
     text-align: center;
