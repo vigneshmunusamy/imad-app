@@ -3,9 +3,6 @@ body {
     margin-top: 75px;
     color:orange;
 }
-.center text-big bold{
-    color:red;
-}
 
 .center {
     text-align: center;
@@ -13,6 +10,7 @@ body {
 
 .text-big {
     font-size: 300%;
+    color:yellow;
 }
 .container{
                 max-width:800px;
