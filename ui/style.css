@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin-top: 75px;
-    color:orange;
+    color:blue;
 }
 
 .center {
@@ -10,7 +10,6 @@ body {
 
 .jio {
     font-size: 300%;
-    color:yellow;
 }
 .container{
                 max-width:800px;
