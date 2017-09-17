@@ -19,7 +19,7 @@ button.onclick=function(){
     request.send(null);
 };
 var nameinput=document.getElementById('name');
-var name=nameinnput.value;
+var name=nameinput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     //make a request to the server
