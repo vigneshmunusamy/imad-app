@@ -32,7 +32,7 @@ submit.onclick=function(){
          if(request.status==200){
     //make a request to the server
     //capture and render the name list
-    var names=['name1','name2','name3'];
+    var names=request.responseText;
     var list='';
     for(var i=0;i<names.length;i++){
         list+= '<li>' + names[i] + '</li>';
@@ -44,4 +44,6 @@ submit.onclick=function(){
     }
     };
  
+    request.open('GET',"http://vickyvijay1147.imad.hasura-app.io/counter",true);
+    request.send(null);
 };
