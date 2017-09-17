@@ -24,5 +24,5 @@ body {
 
 .bullet{
     text-indent:-700px;
-    text-align: center;
+    list-style-position: center;
 }
