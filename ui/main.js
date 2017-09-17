@@ -16,5 +16,5 @@ button.onclick=function(){
     }
 };
     request.open('GET',"http://vickyvijay1147.imad.hasura-app.io/counter",true);
-    //request.send(null);
+    request.send(null);
 };
