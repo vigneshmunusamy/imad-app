@@ -22,3 +22,6 @@ body {
     height: 200px;
 }
 
+.bullet{
+    text-indent:-4px;
+}
