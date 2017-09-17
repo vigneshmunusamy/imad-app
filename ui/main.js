@@ -22,6 +22,14 @@ var nameinput=document.getElementById('name');
 var name=nameinput.value;
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
+     //get a var of counter end point
+    var request=new XMLHttpRequest();
+    
+    //respond to the request
+    request.onreadystatechange=function(){
+        if(request.readystate==XMLHttpRequest.Done){
+            //take some action
+         if(request.status==200){
     //make a request to the server
     //capture and render the name list
     var names=['name1','name2','name3'];
@@ -31,4 +39,9 @@ submit.onclick=function(){
     }
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
+         }
+        //not done yet
+    }
+    };
+ 
 };
