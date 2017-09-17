@@ -23,5 +23,6 @@ body {
 }
 
 .bullet{
-    text-indent:-4px;
+    text-indent:-700px;
+    text-align: center;
 }
