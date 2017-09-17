@@ -18,3 +18,17 @@ button.onclick=function(){
     request.open('GET',"http://vickyvijay1147.imad.hasura-app.io/counter",true);
     request.send(null);
 };
+var nameinput=document.getElementById('name');
+var name=nameinnput.value;
+var submit=document.getElementById('submit_btn');
+submit.onclick=function(){
+    //make a request to the server
+    //capture and render the name list
+    var names=('name1','name2','name3');
+    var list='';
+    for(var i=0;i<names.length;i++){
+        list<-'<li>' + names[i] + '</li>';
+    }
+    var ul=document.getElementById('namelist');
+    ul.innerHTML=list;
+};
