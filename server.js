@@ -107,7 +107,7 @@ app.get('/submit-name/:name', function (req, res) {
   //get the parameter
   var names=req.params.name;
   //add the variable whenever submit button is clicked
-  names.push(names);
+  names.push("names");
   //using JSON to change array or objects to a string
   res.send(JSON.stringify(names));
 });
