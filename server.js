@@ -102,15 +102,15 @@ app.get('/counter', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-//var names=[];
-//app.get('/submit-name', function (req, res) {
+var names=[];
+app.get('/submit-name', function (req, res) {
   //get the parameter
- // var name=req.query.name;
+  var name=req.query.name;
   //add the variable whenever submit button is clicked
-  //names.push(name);
+  names.push(name);
   //using JSON to change array or objects to a string
-  //res.send(JSON.stringify(names));
-//});
+  res.send(JSON.stringify(names));
+});
 app.get('/:articlename',function(req,res){
     var articlesname=req.params.articlename;
     res.send(createtemplate(articles[articlesname]));
