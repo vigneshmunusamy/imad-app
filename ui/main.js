@@ -45,5 +45,5 @@ submit.onclick=function(){
  var nameinput=document.getElementById('name');
  var name=nameinput.value;
     request.open('GET',"http://vickyvijay1147.imad.hasura-app.io/submit-name?name="+name,true);
-    request.send(null);
+    request.send();
 };
