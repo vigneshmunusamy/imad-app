@@ -134,7 +134,7 @@ app.get('/submit-name', function (req, res) {
   res.send(JSON.stringify(names));
 });
 app.get('/articles/:articlename',function(req,res){
-    pool.query("'SELECT * FROM article WHERE title = ' + req.params.articlename", function(err,result){
+    pool.query("SELECT * FROM article WHERE title ="  + req.params.articlename , function(err,result){
        if(err){
             res.status(500).send(err.toString());
         }
@@ -143,7 +143,7 @@ app.get('/articles/:articlename',function(req,res){
             res.status(404).send('article not found');
        }
         else{
-        var articlesname=result.rows[1];
+        var articlesname=result.rows[0];
         res.send(createtemplate(articlesname));
         }
 }
