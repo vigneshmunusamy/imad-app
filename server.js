@@ -146,7 +146,7 @@ app.get('/articles/:articlename',function(req,res){
         var articlesname=result.rows[0];
         res.send(createtemplate(articlesname));
         }
-        }
+//}
     });
 });
 app.get('/ui/madi.png', function (req, res) {
