@@ -143,7 +143,7 @@ app.get('/articles/:articlename',function(req,res){
             res.status(404).send('article not found');
        }
         else{
-        var articlesname=result.rows;
+        var articlesname=result.rows[1];
         res.send(createtemplate(articlesname));
         }
 }
