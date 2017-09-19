@@ -133,9 +133,21 @@ app.get('/submit-name', function (req, res) {
   //using JSON to change array or objects to a string
   res.send(JSON.stringify(names));
 });
-app.get('/:articlename',function(req,res){
-    var articlesname=req.params.articlename;
-    res.send(createtemplate(articles[articlesname]));
+app.get('/articles/articlename',function(req,res){
+    pool.query("SELECT * FROM article WHERE title="+req.params.articlename,function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else if(result.rows.length === 0){
+            res.status(404).send('article not found');
+        }
+        else{
+        var articlesname=result.rows[0];
+        res.send(createtemplate(articlesname));
+        }
+    });
+    var articleData=req.params.articlename;
+    res.send(createtemplate(articleData));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
