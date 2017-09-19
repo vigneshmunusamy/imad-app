@@ -110,7 +110,18 @@ app.get('/counter', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
+var pool=new pool(config);
 app.get('/test-db',function(req,res){
+    //make a select request
+    //respond the result
+    pool.query('SELECT * from store', function(req,res){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            res.send(JSON.stringify(result));
+        }
+    });
     
 });
 var names=[];
