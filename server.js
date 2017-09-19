@@ -146,8 +146,6 @@ app.get('/articles/articlename',function(req,res){
         res.send(createtemplate(articlesname));
         }
     });
-    var articleData=req.params.articlename;
-    res.send(createtemplate(articleData));
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
