@@ -138,15 +138,15 @@ app.get('/articles/:articlname',function(req,res){
        if(err){
             res.status(500).send(err.toString());
        }
-       //else {
-         //  if(result.rows.length===0){
-         //   res.status(404).send('article not found');
-      // }
+       else {
+           if(result.rows.length===0){
+            res.status(404).send('article not found');
+       }
         else{
         var articlesname=result.rows[0];
         res.send(createtemplate(articlesname));
         }
-//}
+}
     });
 });
 app.get('/ui/madi.png', function (req, res) {
