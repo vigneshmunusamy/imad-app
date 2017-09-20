@@ -133,8 +133,8 @@ app.get('/submit-name', function (req, res) {
   //using JSON to change array or objects to a string
   res.send(JSON.stringify(names));
 });
-app.get('/articles/:articlename',function(req,res){
-    pool.query("SELECT * FROM article WHERE title ="+req.params.articlename , function(err,result){
+app.get('/articles/articleone',function(req,res){
+    pool.query("SELECT * FROM article ", function(err,result){
        //if(err){
          //   res.status(500).send(err.toString());
       //  }
