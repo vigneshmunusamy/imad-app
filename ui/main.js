@@ -10,7 +10,7 @@ submit.onclick=function(){
             //take some action
          if(request.status === 200){
              alert('sucess');
-         }else if(request.status === 404){
+         }else if(request.status === 403){
              alert('invalid');
          }else if(request.status === 500){
              alert('unknown error');
