@@ -13,8 +13,8 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-//var articles=
-//{
+var articles=
+{
  'articleone':  {
     title:'articleone|vignesh',
     heading:'Article 1',
