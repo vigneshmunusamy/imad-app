@@ -139,7 +139,7 @@ app.get('/articles/:articlname',function(req,res){
             res.status(500).send(err.toString());
        }
        else {
-           if(!result.rows.length){
+           if(!result.rows.length()){
             res.status(404).send('article not found');
        }
         else{
