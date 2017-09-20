@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+var crypto=reqire('crypto');
 var config={
     user:'vickyvijay1147',
     database:'vickyvijay1147',
@@ -58,6 +59,14 @@ var counter=0;
 app.get('/counter', function (req, res) {
     counter=counter+1;
   res.send(counter.toString());
+});
+function hash(input,salt){
+    var hashed=crypto.pbkdf2Sync(input,salt,1000,512,'sha512');
+    return hashed.toString('hex');
+}
+app.get('/hash/:input',function(req,res){
+  var hashedstring=hash(req.params.input,'this_is_duplicate');
+  res.send(hashedstring);
 });
 
 app.get('/ui/style.css', function (req, res) {
