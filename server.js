@@ -134,11 +134,11 @@ app.get('/submit-name', function (req, res) {
   res.send(JSON.stringify(names));
 });
 app.get('/articles/:articlname',function(req,res){
-    pool.query("SELECT * FROM article WHERE title ='" + req.params.articlename + "'" , function (result){
-       //if(err){
-         //   res.status(500).send(err.toString());
-      //  }
-       //else {
+    pool.query("SELECT * FROM article WHERE title ='" + req.params.articlename + "'" , function (err,result){
+       if(err){
+            res.status(500).send(err.toString());
+       }
+       else {
            if(result.rows.length === 0){
             res.status(404).send('article not found');
        }
@@ -146,7 +146,7 @@ app.get('/articles/:articlname',function(req,res){
         var articlesname=result.rows[0];
         res.send(createtemplate(articlesname));
         }
-//}
+}
     });
 });
 app.get('/ui/madi.png', function (req, res) {
