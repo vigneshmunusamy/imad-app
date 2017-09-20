@@ -8,11 +8,11 @@ submit.onclick=function(){
     request.onreadystatechange=function(){
         if(request.readystate==XMLHttpRequest.Done){
             //take some action
-         if(request.status==200){
+         if(request.status===200){
              alert('sucess');
-         }else if(request.status==403){
+         }else if(request.status===403){
              alert('invalid');
-         }else if(request.status==500){
+         }else if(request.status===500){
              alert('unknown error');
          }
     }
