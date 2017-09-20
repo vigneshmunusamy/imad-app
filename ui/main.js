@@ -23,8 +23,8 @@ submit.onclick=function(){
         //not done yet
     }
     };
- var nameinput=document.getElementById('name');
- var name=nameinput.value;
-    request.open('GET',"http://vickyvijay1147.imad.hasura-app.io/submit-name?name="+name,true);
-    request.send(null);
+ var username=document.getElementById('username').value;
+ var password=document.getElementById('password').value;
+    request.open('POST',"http://vickyvijay1147.imad.hasura-app.io/login",true);
+    request.send(JSON.stringify(username: username,password: password));
 };
