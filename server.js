@@ -13,8 +13,8 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var articles=
-{
+//var articles=
+//{
  'articleone':  {
     title:'articleone|vignesh',
     heading:'Article 1',
@@ -140,7 +140,7 @@ app.get('/articles/:articlname',function(req,res){
        }
        else {
            if(result.rows.length===0){
-            res.status(404).send('article not found');
+            res.status(401).send('article not found');
        }
         else{
         var articlesname=result.rows[0];
