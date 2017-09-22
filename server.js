@@ -4,6 +4,7 @@ var path = require('path');
 var Pool=require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
+var session=require('express-session');
 var config={
     user:'vickyvijay1147',
     database:'vickyvijay1147',
@@ -15,6 +16,11 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+ secret:'someRandomSecretValue',
+ Cookie:{maxAge:1000*60*60*24*30}
+ 
+}));
 function createtemplate(data)
 {
     var title=data.title;
@@ -118,6 +124,7 @@ app.post('/login',function(req,res){
          var salt=dbstring.split('$')[2];
          var hashedpassword=hash(password,salt);
          if(hashedpassword==dbstring){
+             req.session.auth={userId:result.rows[0].id};
              res.send('sucessfully logged in');
          }
          else{
@@ -125,6 +132,13 @@ app.post('/login',function(req,res){
          }
         }
    });
+});
+app.get('/create-login', function (req, res) {
+    if(req.session&&req.session.auth&&req.session.auth.userId){
+  res.send('logged in'+req.session.auth.userId.toString());
+    }else{
+        res.send('not logged in');
+    }
 });
 var names=[];
 app.get('/submit-name', function (req, res) {
