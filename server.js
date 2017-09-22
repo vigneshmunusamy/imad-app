@@ -123,7 +123,7 @@ app.post('/login',function(req,res){
          var dbstring=result.rows[0].password;
          var salt=dbstring.split('$')[2];
          var hashedpassword=hash(password,salt);
-         if(hashedpassword==dbstring){
+         if(hashedpassword===dbstring){
              req.session.auth={userId:result.rows[0].id};
              res.send('sucessfully logged in');
          }
