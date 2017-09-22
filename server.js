@@ -115,7 +115,7 @@ app.post('/login',function(req,res){
        if(err){
             res.status(500).send(err.toString());
         }
-        else
+        else{
         if(result.rows.length===0){
             res.status(403).send('invalid username/password');
         }
@@ -130,6 +130,7 @@ app.post('/login',function(req,res){
          else{
              res.status(403).send('invalid username/password');
          }
+        }
         }
    });
 });
